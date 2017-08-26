@@ -1,0 +1,11 @@
+import Tkinter
+root=Tkinter.Tk()
+button1=Tkinter.Button(root,anchor=Tkinter.E,height=5,width=40,text='BUTTON1')
+button1.pack()
+button2=Tkinter.Button(root,text='BUTTON2',bg='blue')
+button2.pack()
+button3=Tkinter.Button(root,text='BUTTOON3',fg='red')
+button3.pack()
+button4=Tkinter.Button(root,text='BUTTOON4',state=Tkinter.DISABLED)
+button4.pack()
+root.mainloop()

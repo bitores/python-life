@@ -1,0 +1,131 @@
+particle_system Easy3d/freeParticleSystem
+{
+	material 					yingguang_material
+	particle_width_factor		0.1
+	aspect_ratio				1
+	quota						7
+	stacks						1
+	slices						8
+	always_generate_particle    yes
+	has_touch_event				no
+
+	emitter Point emitter1
+    {
+    	angle           		10
+        emission_rate   		5
+        direction       		0 0 1
+        duration_min			0.07
+        duration_max 			0.21
+        repeat_delay_min		1
+		repeat_delay_max		3
+		position_x_factor		0.051388889
+		position_y_factor		0.05703125
+		direction       		0 1 0
+        colour_range_start  	1 1 1 0
+        colour_range_end   		1 1 1 0
+		velocity_min			10
+		velocity_max			100
+		time_to_live_min		5
+		time_to_live_max		12
+		min_tex_coord_index		0
+		max_tex_coord_index		7				
+    }
+    
+    emitter Point emitter2
+    {
+    	angle           		10
+        emission_rate   		5
+        direction       		0 0 1
+        duration_min			0.07
+        duration_max 			0.21
+        repeat_delay_min		1
+		repeat_delay_max		3
+		position_x_factor		0.145833333
+		position_y_factor		0.09921875
+		direction       		0 1 0
+        colour_range_start  	1 1 1 0
+        colour_range_end   		1 1 1 0
+		velocity_min			10
+		velocity_max			100
+		time_to_live_min		5
+		time_to_live_max		12
+		min_tex_coord_index		2
+		max_tex_coord_index		7				
+    }
+    
+    affector LinearForce
+	{
+		force_vector			0 10 0
+		force_application		add
+	}
+	 
+    affector ColourInterpolator
+    {
+        time0                   0
+        colour0                 1 1 1 0
+        time1                   0.2
+        colour1                 1 1 1 1
+        time2                   0.9
+        colour2                 1 1 1 1
+        time3                   1
+        colour3                 1 1 1 0
+    }
+    
+
+	affector Scaler
+	{
+		rate -5
+	}
+
+}
+
+
+particle_system Easy3d/PugongyingParticleSystem
+{
+	material 					yingguang_material
+	particle_width_factor		0.08
+	aspect_ratio				1
+	quota						100
+	stacks						1
+	slices						8
+	always_generate_particle    yes
+	has_touch_event				yes
+
+    emitter Point
+    {
+        angle           		60
+        emission_rate   		50
+        duration_min			0.07
+        duration_max 			0.21
+        repeat_delay_min		0.5
+		repeat_delay_max		1.5
+		position				0.5 0.5 0
+		velocity_min			80
+		velocity_max 			120
+		time_to_live_min		2.0
+		time_to_live_max		4.5
+        direction       		0 1 0
+        colour_range_start  	1 1 1 1
+        colour_range_end   		1 1 1 1
+        min_tex_coord_index		1
+		max_tex_coord_index		7
+    }
+    affector ColourInterpolator
+    {
+        time0                   0
+        colour0                 1 1 1 1
+        time1                   0.9
+        colour1                 1 1 1 1
+        time2                   1
+        colour2                 1 1 1 0
+    }
+    affector Scaler
+	{
+		rate -20
+	}
+    
+    
+}
+
+
+

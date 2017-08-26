@@ -1,0 +1,2 @@
+python android_capture.py
+pause

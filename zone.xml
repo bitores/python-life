@@ -1,0 +1,6 @@
+<name>name</name>
+<extension>
+<name>testName</name>
+<file>testFile</file>
+<propertiesFile>testProperties</propertiesFile>
+</extension>
